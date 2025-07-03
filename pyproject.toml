@@ -1,0 +1,20 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=1.0.15",
+    "fastapi>=0.115.14",
+    "langchain>=0.3.26",
+    "langchain-community>=0.3.27",
+    "langchain-google-genai>=2.1.6",
+    "pypdf>=5.7.0",
+    "python-dotenv>=1.1.1",
+    "sentence-transformers>=5.0.0",
+    "streamlit>=1.46.1",
+    "torch>=2.7.1",
+    "transformers>=4.53.0",
+    "uvicorn>=0.35.0",
+]
