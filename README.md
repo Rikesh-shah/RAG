@@ -37,7 +37,7 @@ cd RAG
 ```
 
 ### 3. Run document ingestion
-- python -m scripts.run_data_ingestion.py
+- python -m scripts.run_data_ingestion
 
 ### 4. Start Backend
 - uvicorn backend.main:app --reload
