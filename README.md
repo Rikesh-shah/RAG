@@ -21,14 +21,13 @@ A context-aware AI assistant powered by LangChain, Google Gemini, and a vector d
 
 
 ```bash
-git clone https://github.com/yourname/azithro-rag-chatbot.git
-cd azithro-rag-chatbot
+git clone https://github.com/Rikesh-shah/RAG.git
+cd RAG
 ```
 
 ### 2. Environment Setup
 
 ```bash
-- uv init
 - uv venv
 - for windows
     .venv\Scripts\activate.bat
