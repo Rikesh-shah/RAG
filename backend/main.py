@@ -25,7 +25,10 @@ def ask(req: AskRequest):
     
     sources = set()
     for doc in result.get("source_documents", []):
-        sources.add(doc.metadata.get("source", "Unknown"))
+        # sources.add(doc.metadata.get("source", "Unknown"))
+        source = doc.metadata.get("source", "Unknown")
+        page = doc.metadata.get("page", "N/A")
+        sources.add(f"{source} (Page {page})")
     return {
         "answer": result["answer"],
         "sources": list(sources),

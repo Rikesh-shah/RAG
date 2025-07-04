@@ -23,7 +23,7 @@ with st.sidebar:
         res = requests.post(f"{BACKEND_URL}/start-session")
         st.session_state.session_id = res.json()["session_id"]
         st.session_state.chat_history = []
-        st.experimental_rerun()
+        st.rerun()
 
 # main chat UI
 st.subheader("📥 Ask your medical question:")

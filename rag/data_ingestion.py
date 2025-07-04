@@ -10,6 +10,7 @@ def load_and_split_pdfs(pdf_dir: str, chunk_size=500, chunk_overlap=50):
             pages = loader.load()
             for page in pages:
                 page.metadata["source"] = file
+                page.metadata["page"] = page.metadata.get("page", 0) + 1
             docs.extend(pages)
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     chunks = splitter.split_documents(docs)
