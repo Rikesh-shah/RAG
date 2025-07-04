@@ -9,4 +9,5 @@ CHROMA_PATH = "chroma_db"
 EMBED_MODEL_NAME = "models/text-embedding-004"
 PDF_DIR = "data/"
 
+# embedding function for enbedding creation of docs
 embedding_function = GoogleGenerativeAIEmbeddings(model=EMBED_MODEL_NAME)
