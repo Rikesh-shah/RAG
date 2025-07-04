@@ -44,7 +44,7 @@ cd azithro-rag-chatbot
 - uvicorn backend.main:app --reload
 
 ### 5. Start Frontend
-- Streamlit run frontend/streamlit_app.py
+- streamlit run frontend/streamlit_app.py
 ---
 
 ### to generate gemini api key:
