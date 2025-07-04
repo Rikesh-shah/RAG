@@ -43,6 +43,7 @@ cd RAG
 - uvicorn backend.main:app --reload
 
 ### 5. Start Frontend
+Open another terminal , navigate to main project directory , activate the environment and run the below command.
 - streamlit run frontend/streamlit_app.py
 ---
 
