@@ -4,7 +4,7 @@ import requests
 BACKEND_URL = "http://localhost:8000"
 
 st.set_page_config(page_title="Azithromycin RAG Chatbot", layout="wide")
-st.title("💊 Azithromycin RAG Chatbot")
+st.title("💊 Medical RAG Chatbot")
 
 # Sidebar for session & chat history
 with st.sidebar:
