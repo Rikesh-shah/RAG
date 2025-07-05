@@ -54,6 +54,14 @@ Open another terminal , navigate to main project directory , activate the enviro
         - Copy the generated API key.
     and paste it in the .env file under GEMINI_API_KEY
 
+### to generate huggingface token:
+    - Go to "https://huggingface.co/settings/tokens"
+    - Generate Token
+        - Click on "Create new token" button
+        - Enter a name for your access token and select the appropriate permissions.
+        - Click on "Create Access Token" button
+        - Copy the generated access token.
+    and paste it in the .env file under HUGGINGFACEHUB_ACCESS_TOKEN
 ---
 
 ### Summary

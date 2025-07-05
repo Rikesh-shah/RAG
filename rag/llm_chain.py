@@ -2,12 +2,16 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationalRetrievalChain
 from langchain_google_genai import ChatGoogleGenerativeAI
 from rag import load_vectorstore
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 def load_llm():
     return ChatGoogleGenerativeAI(
         model="gemini-2.5-flash-preview-05-20",
         temperature=0.2,
-        convert_system_message_to_human=True
+        convert_system_message_to_human=True,
+        google_api_key=os.getenv("GOOGLE_API_KEY")
     )
 
 def build_chain():
@@ -21,7 +25,7 @@ def build_chain():
                         For every paragraph, add a citation to the source like this: [filename.pdf, Page X].
 
                         At the end of your response, include a list of all sources used in the format:
-                        - filename.pdf (Page X)
+                        
 
                         ---
 
@@ -36,5 +40,6 @@ def build_chain():
     return ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=retriever,
-        return_source_documents=True
+        return_source_documents=True,
+        combine_docs_chain_kwargs={"prompt": prompt_template}
     )

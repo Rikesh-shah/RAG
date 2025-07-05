@@ -2,6 +2,10 @@ from fastapi import FastAPI, Request
 from uuid import uuid4
 from pydantic import BaseModel
 from rag import build_chain
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 app = FastAPI()
 chain = build_chain()

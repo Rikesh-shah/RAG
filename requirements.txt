@@ -10,3 +10,4 @@ streamlit
 python-dotenv
 langchain-google-genai
 langchain-community
+langchain_huggingface
